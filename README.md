@@ -1,1 +1,1 @@
-Discord Roleplay Tools is a collection of text-based roleplaying tools that help to make roleplay on Discord servers a little easier.
+Discord Roleplay Tools is a collection of text-based roleplaying tools that help to make text-based roleplay on Discord servers a little easier. These tools range in variety and will be added to as thought of, so stay tuned!
