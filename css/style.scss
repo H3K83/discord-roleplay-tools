@@ -1,0 +1,327 @@
+@import "../node_modules/bootstrap/scss/functions";
+
+$primary: #36393f;
+$secondary: #2f3136;
+$tertiary: #292B2F;
+$quarternary: #18191C;
+$light: #bfbfbf;
+$dark: #202225;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "tertiary": $tertiary,
+  "quarternary": $quarternary,
+  "light": $light,
+  "dark": $dark
+);
+
+@import "../node_modules/bootstrap/scss/variables";
+
+$btn-border-width: 0;
+$dropdown-border-radius: $border-radius-lg;
+$dropdown-border-width: 0;
+$dropdown-dark-color: $white;
+$dropdown-dark-bg: $secondary;
+$dropdown-dark-link-hover-bg: shade-color($dropdown-dark-bg, 20%);
+
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/root";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/tables";
+@import "../node_modules/bootstrap/scss/forms";
+@import "../node_modules/bootstrap/scss/buttons";
+@import "../node_modules/bootstrap/scss/transitions";
+@import "../node_modules/bootstrap/scss/dropdown";
+@import "../node_modules/bootstrap/scss/button-group";
+@import "../node_modules/bootstrap/scss/nav";
+@import "../node_modules/bootstrap/scss/navbar";
+@import "../node_modules/bootstrap/scss/card";
+@import "../node_modules/bootstrap/scss/accordion";
+@import "../node_modules/bootstrap/scss/breadcrumb";
+@import "../node_modules/bootstrap/scss/pagination";
+@import "../node_modules/bootstrap/scss/badge";
+@import "../node_modules/bootstrap/scss/alert";
+@import "../node_modules/bootstrap/scss/progress";
+@import "../node_modules/bootstrap/scss/list-group";
+@import "../node_modules/bootstrap/scss/close";
+@import "../node_modules/bootstrap/scss/toasts";
+@import "../node_modules/bootstrap/scss/modal";
+@import "../node_modules/bootstrap/scss/tooltip";
+@import "../node_modules/bootstrap/scss/popover";
+@import "../node_modules/bootstrap/scss/carousel";
+@import "../node_modules/bootstrap/scss/spinners";
+@import "../node_modules/bootstrap/scss/offcanvas";
+@import "../node_modules/bootstrap/scss/placeholders";
+@import "../node_modules/bootstrap/scss/helpers";
+@import "../node_modules/bootstrap/scss/utilities/api";
+
+$custom-font: "Catamaran", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+
+[contenteditable]:focus-visible {
+  outline: none !important;
+}
+
+.btn-check:focus + .btn-secondary,
+.btn-secondary:focus {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.collapsing {
+  display: none !important;
+  -webkit-transition: none !important;
+  transition: none !important;
+}
+
+.custom-font {
+  font-family: $custom-font !important;
+}
+
+.dropdown-item {
+  text-decoration: none !important;
+}
+
+.fs-7 {
+  font-size: .85rem !important;
+}
+
+@media (min-width: 576px) {
+  .w-sm-25 {
+    width: 25% !important;
+  }
+  .w-sm-50 {
+    width: 50% !important;
+  }
+  .w-sm-75 {
+    width: 75% !important;
+  }
+  .w-sm-100 {
+    width: 100% !important;
+  }
+  .w-sm-auto {
+    width: auto !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .w-md-25 {
+    width: 25% !important;
+  }
+  .w-md-50 {
+    width: 50% !important;
+  }
+  .w-md-75 {
+    width: 75% !important;
+  }
+  .w-md-100 {
+    width: 100% !important;
+  }
+  .w-md-auto {
+    width: auto !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .w-lg-25 {
+    width: 25% !important;
+  }
+  .w-lg-50 {
+    width: 50% !important;
+  }
+  .w-lg-75 {
+    width: 75% !important;
+  }
+  .w-lg-100 {
+    width: 100% !important;
+  }
+  .w-lg-auto {
+    width: auto !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .w-xl-25 {
+    width: 25% !important;
+  }
+  .w-xl-50 {
+    width: 50% !important;
+  }
+  .w-xl-75 {
+    width: 75% !important;
+  }
+  .w-xl-100 {
+    width: 100% !important;
+  }
+  .w-xl-auto {
+    width: auto !important;
+  }
+}
+
+@media (min-width: 1400px) {
+  .w-xxl-25 {
+    width: 25% !important;
+  }
+  .w-xxl-50 {
+    width: 50% !important;
+  }
+  .w-xxl-75 {
+    width: 75% !important;
+  }
+  .w-xxl-100 {
+    width: 100% !important;
+  }
+  .w-xxl-auto {
+    width: auto !important;
+  }
+}
+
+a,
+a:link,
+a:visited {
+  color: $light;
+  text-decoration: underline;
+  -webkit-transition: none !important;
+  transition: none !important;
+}
+
+a:hover,
+a:active {
+  color: $white;
+  text-decoration: underline;
+  -webkit-transition: none !important;
+  transition: none !important;
+}
+
+nav a,
+nav a:link,
+nav a:visited,
+nav a:hover,
+nav a:active {
+  text-decoration: none;
+  -webkit-transition: none !important;
+  transition: none !important;
+}
+
+.navbar-brand
+.navbar-brand:link,
+.navbar-brand:visited,
+.navbar-brand:hover,
+.navbar-brand:active {
+  color: $light !important;
+  &.active {
+    color: $white !important;
+  }
+}
+
+.nav-link,
+.nav-link:link,
+.nav-link:visited {
+  color: $light;
+}
+
+.nav-link:hover,
+.nav-link:active {
+  color: $white;
+}
+
+.card .card-link:hover + .card-header hr,
+.card .card-link:active + .card-header hr {
+  background-color: $white !important;
+  opacity: 1 !important;
+}
+
+label[for="icon-upload"]:before,
+label[for="banner-upload"]:before {
+  background-color: rgba($black, 0.5);
+  content: "";
+  display: none;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+label[for="icon-upload"]:after,
+label[for="banner-upload"]:after {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' class='bi bi-images' viewBox='0 0 16 16'><path d='M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z'/><path d='M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2zM14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1zM2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1h-10z'/></svg>");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  color: $white;
+  content: attr(data-size);
+  display: none;
+  font-size: 0.85rem;
+  padding-top: calc(24px + 0.05rem);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+label[for="icon-upload"]:hover:before,
+label[for="banner-upload"]:hover:before {
+  display: block;
+}
+
+label[for="icon-upload"]:hover:after,
+label[for="banner-upload"]:hover:after {
+  display: inline-block;
+}
+
+#card-header.collapse:not(.show) {
+  display: none !important;
+}
+
+#card-header.collapse:not(.show) + .card-body {
+  display: flex !important;
+  flex-direction: column !important;
+  padding-top: ($spacer * 1) !important;
+}
+
+#card-header.collapse:not(.show) + .card-body .badge {
+  align-self: end !important;
+  margin: 0 !important;
+  margin-top: ($spacer * .5) !important;
+  order: 4 !important;
+  position: static !important;
+}
+
+#card-header.collapse:not(.show) + .card-body .card-title {
+  order: 1 !important;
+}
+
+#card-header.collapse:not(.show) + .card-body .card-subtitle {
+  order: 2 !important;
+}
+
+#card-header.collapse:not(.show) + .card-body .card-text {
+  order: 3 !important;
+}
+
+#recipient.show + .card-title {
+  display: none;
+}
+
+#recipient + .card-title {
+  display: block;
+}
+
+#capture-btn-group .dropdown-item {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' class='bi bi-check-circle' viewBox='0 0 16 16'><path d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/><path d='M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z'/></svg>");
+  background-position: calc(100% - 1rem) center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  &.collapsed {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' class='bi bi-circle' viewBox='0 0 16 16'><path d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/></svg>");
+  }
+}
