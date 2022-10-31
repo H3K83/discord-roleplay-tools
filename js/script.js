@@ -23,12 +23,12 @@ const btn = document.querySelector("#capture-btn");
 btn.addEventListener("click", capture);
 
 //Convert rich content to plain text in editable divs
-let allEditableDivs = document.querySelectorAll('[contenteditable]');
+//let allEditableDivs = document.querySelectorAll('[contenteditable]');
 
-[].forEach.call(allEditableDivs, function (el) {
-  el.addEventListener('paste', function(e) {
-    e.preventDefault();
-    var text = e.clipboardData.getData("text/plain");
-    document.execCommand("insertHTML", false, text);
-  }, false);
-});
+//[].forEach.call(allEditableDivs, function (el) {
+//  el.addEventListener('paste', function(e) {
+//    e.preventDefault();
+//    var text = e.clipboardData.getData("text/plain");
+//    document.execCommand("insertHTML", false, text);
+//  }, false);
+//});
