@@ -3,11 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="node_modules/quill/dist/quill.core.css" rel="stylesheet" />
+    <link href="node_modules/quill/dist/quill.snow.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-    <title>DRT— Stylized Post Generator</title>
+    <title>DRT — Stylized Post Generator</title>
   </head>
   <body class="bg-dark d-flex flex-column vh-100">
     <header class="mb-5">
@@ -34,21 +36,22 @@
       <div class="container text-center">
         <div class="row g-2">
           <div class="col-12">
-          <div id="capture" class="card bg-transparent border-0 rounded-3 overflow-hidden text-start">
-            <div class="card-body bg-quarternary rounded-0 p-5">
-              <div contenteditable id="post-title" class="card-title h5 text-white custom-font collapse show">Post Title</div>
-              <div contenteditable class="card-text text-light lh-base">Write your post here...</div>
+            <div id="capture" class="card bg-transparent border-0 text-start">
+              <div class="card-body dropdown bg-quarternary rounded-3 p-5 position-relative">
+                <button id="toolbar-dropdown" class="btn btn-secondary dropdown-toggle position-absolute" type="button" data-bs-auto-close="false" data-bs-toggle="dropdown" aria-expanded="false" style="top: 0.5rem; right: 0.5rem"></button>
+                <div contenteditable id="post-title" class="card-title h5 text-white custom-font contenteditable-plain collapse show">Post Title</div>
+                <div id="post-content" class="card-text text-light lh-base"></div>
+              </div>
+            </div>
+            <div id="capture-btn-group" class="btn-group dropup d-flex my-1" role="group">
+              <button id="capture-btn" type="button" class="btn btn-secondary rounded-start-3 flex-grow-1">Capture</button>
+              <button id="settings-btn" type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split rounded-end-3" data-bs-toggle="dropdown" aria-expanded="false" style="flex: 0"></button>
+              <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="settings-btn">
+                <li><a class="dropdown-item" data-bs-toggle="collapse" href="#post-title" role="button" aria-expanded="true" aria-controls="post-title">Post Title</a></li>
+              </ul>
             </div>
           </div>
-          <div id="capture-btn-group" class="btn-group dropup d-flex my-1" role="group">
-            <button id="capture-btn" type="button" class="btn btn-secondary rounded-start-3 flex-grow-1">Capture</button>
-            <button id="settings-btn" type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split rounded-end-3" data-bs-toggle="dropdown" aria-expanded="false" style="flex: 0"></button>
-            <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="settings-btn">
-              <li><a class="dropdown-item" data-bs-toggle="collapse" href="#post-title" role="button" aria-expanded="true" aria-controls="post-title">Post Title</a></li>
-            </ul>
-          </div>
         </div>
-      </div>
       </div>
     </main>
     <footer>
@@ -56,8 +59,22 @@
         <p class="text-light d-inline-block m-0 px-3 py-5 text-center">This website was designed by <a href="https://github.com/H3K83" target="_blank" title="Hekate">Hekate</a> and is licensed under a Creative Commons <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-No Derivatives 4.0 International">BY-NC-ND 4.0 International License</a>.</p>
       </div>
     </footer>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/html2canvas.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="node_modules/html2canvas/dist/html2canvas.min.js"></script>
+    <script src="node_modules/quill/dist/quill.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+      var quill = new Quill("#post-content", {
+        modules: {
+          toolbar: [["bold", "italic", "underline", "strike", { list: "ordered" }, { list: "bullet" }, { indent: "-1" }, { indent: "+1" }, { size: ["small", false, "large", "huge"] }, { header: [1, 2, 3, 4, 5, 6, false] }, "clean"]],
+        },
+        placeholder: "Write your post here...",
+        theme: "snow",
+      });
+
+      var quillToolbar = document.querySelector(".ql-toolbar");
+      quillToolbar.classList.add("dropdown-menu", "dropdown-menu-end", "bg-secondary");
+      quillToolbar.style.width = "250px";
+    </script>
   </body>
 </html>

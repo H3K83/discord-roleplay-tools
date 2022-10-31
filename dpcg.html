@@ -42,11 +42,11 @@
             </div>
             <div class="card-body bg-quarternary rounded-0 position-relative" style="padding-top: calc(0.5rem + 50px)">
               <div class="badge bg-tertiary d-inline-block fw-normal m-3 p-2 position-absolute top-0 end-0">
-                <div contenteditable class="d-inline-block">Username</div>#<div contenteditable class="d-inline-block">ID</div>
+                <div contenteditable class="d-inline-block contenteditable-plain">Username</div>#<div contenteditable class="d-inline-block contenteditable-plain">ID</div>
               </div>
-              <div contenteditable class="card-title h5 text-white custom-font mb-0">Nickname</div>
-              <div id="alias" class="card-subtitle h6 text-light collapse show">aka "<div contenteditable class="ediatble-div d-inline-block">Alias</div>"</div>
-              <div contenteditable id="quote" class="card-text text-light fs-7 mt-2 collapse show">About me text goes here.</div>
+              <div contenteditable class="card-title h5 text-white custom-font mb-0 contenteditable-plain">Nickname</div>
+              <div id="alias" class="card-subtitle h6 text-light collapse show">aka "<div contenteditable class="d-inline-block contenteditable-plain">Alias</div>"</div>
+              <div contenteditable id="quote" class="card-text text-light fs-7 mt-2 contenteditable-plain collapse show">About me text goes here.</div>
             </div>
           </div>
           <div id="capture-btn-group" class="btn-group dropup d-flex my-1" role="group">
@@ -66,8 +66,8 @@
         <p class="text-light d-inline-block m-0 px-3 py-5 text-center">This website was designed by <a href="https://github.com/H3K83" target="_blank" title="Hekate">Hekate</a> and is licensed under a Creative Commons <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-No Derivatives 4.0 International">BY-NC-ND 4.0 International License</a>.</p>
       </div>
     </footer>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/html2canvas.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="node_modules/html2canvas/dist/html2canvas.min.js"></script>
     <script src="js/script.js"></script>
     <script>
       var iconOutput, iconUpload, iconImage;
